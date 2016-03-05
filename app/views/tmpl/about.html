@@ -1,16 +1,28 @@
 <div class="page">
-    <div class="pageheader">
-        <h2>{{page.title}} <span></h2>
 
-        <div class="page-bar">
-            <ul class="page-breadcrumb">
-                <li>
-                    <a ui-sref="app.dashboard"><i class="fa fa-home"></i> {{main.title}}</a>
-                </li>
-                <li>
-                    <a ui-sref="app.dashboard">{{page.title}}</a>
-                </li>
-            </ul>
+    <div class="pageheader">
+        <h2>{{page.title}}</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <section class="tile" fullscreen="isFullscreen01">
+                <div class="tile-body">
+                    <p>This demo uses Angular.js. Each draggable widget can have it's own controller and scope with it's own data calls and logic. Not only does this demo show off a neat visual interaction, but it boasts a functional, thought out solution
+                        to the seperation of concerns for each widget.</p>
+                    <p>Feel free to review my code and suggest a better way to do this. I tried to get it to work with UI-router, but there didn't seem to be an effective way that didn't sacrifice flexibility.</p>
+                    <p>Other stuff used...</p>
+                    <p>
+                        <ul>
+                            <li>Sortable.js</li>
+                            <li>UI-Router</li>
+                            <li>FontAwesome</li>
+                            <li>Underscore.js</li>
+                        </ul>
+                    </p>
+                </div>
+            </section>
         </div>
     </div>
+
 </div>

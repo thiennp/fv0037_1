@@ -12429,5 +12429,182 @@ hr.line-full {
   100% {
     transform: translateZ(0) rotateY(0deg);
     opacity: 1; } }
+#header .branding a.brand {
+  background: none;
+  font-size: 30px;
+  padding-left: 56px;
+  padding-top: 10px;
+  position: relative; }
+  #header .branding a.brand .fa {
+    font-size: 50px;
+    left: 0;
+    position: absolute;
+    top: 20px; }
+  #header .branding a.brand .subtitle {
+    font-size: 68%;
+    margin-top: -15px; }
+
+#sidebar uib-accordion .panel-group .panel {
+  padding-top: 30px; }
+
+@media only screen and (max-width: 992px) {
+  .appWrapper.sidebar-sm #header .branding, .appWrapper:not(.sidebar-sm):not(.sidebar-xs) #header .branding {
+    width: 80px; }
+    .appWrapper.sidebar-sm #header .branding .brand, .appWrapper:not(.sidebar-sm):not(.sidebar-xs) #header .branding .brand {
+      margin-left: 0; } }
+@media only screen and (max-width: 768px) {
+  #header .branding a.brand {
+    font-size: 18px; }
+    #header .branding a.brand .fa {
+      font-size: 24px;
+      left: 10px;
+      position: relative;
+      top: -15px; }
+    #header .branding a.brand strong {
+      float: left; }
+    #header .branding a.brand .subtitle {
+      float: left;
+      margin-left: 5px;
+      margin-top: 1px;
+      font-size: 100%; } }
+/* Coolors Exported Palette - coolors.co/f74750-752d43-ba8f5b-a3586d-ed9890 */
+* {
+  box-sizing: border-box; }
+
+#main {
+  width: 100%;
+  padding: 1.5em 1.5em 1.5em 250px;
+  background: #418bca; }
+  .sidebar-sm #main {
+    padding-left: 80px; }
+  .sidebar-xs #main {
+    padding-left: 40px; }
+
+#main.ng-hide-add,
+#main.ng-hide-remove {
+  transition: all 0.3s cubic-bezier(0.69, 0.17, 0.16, 0.92); }
+
+#main.ng-hide {
+  transform: scale3d(0.9, 0.9, 0.9);
+  opacity: 0.2; }
+
+#dashboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5em 1.5em 1.5em 250px;
+  background: #418bca; }
+  .sidebar-sm #dashboard {
+    padding-left: 80px; }
+  .sidebar-xs #dashboard {
+    padding-left: 40px; }
+
+#dashboard.ng-hide-add,
+#dashboard.ng-hide-remove {
+  transition: all 0.3s cubic-bezier(0.69, 0.17, 0.16, 0.92); }
+
+#dashboard.ng-hide {
+  left: 100vw; }
+
+#widgets {
+  display: none;
+  font-size: 70%; }
+
+.widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .widgets.widgets-empty {
+    min-height: 180px; }
+  .widgets .widget {
+    position: relative;
+    flex: 1;
+    margin-bottom: 1em;
+    min-width: 48%;
+    max-width: 48%; }
+  .widgets .card-container .card {
+    min-height: 0;
+    margin-bottom: 0; }
+
+.widget.ng-move,
+.widget.ng-enter,
+.widget.ng-leave {
+  transition: none; }
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.widget-container {
+  position: relative;
+  flex: 1;
+  margin-bottom: 1em; }
+  .widget-container.full {
+    flex: 2 100%; }
+  .widget-container.half {
+    flex: 1;
+    min-width: 48%;
+    max-width: 48%; }
+
+.widget {
+  background: #3681c1;
+  border: 2px solid #3681c1;
+  color: #ffffff;
+  text-align: center;
+  padding: 3em 1em;
+  transition: border 0.3s cubic-bezier(0.69, 0.17, 0.16, 0.92); }
+  .widget.widget-ghost {
+    background: transparent;
+    border: 2px dashed #418bca;
+    color: #418bca; }
+  .widget:hover .widget-options {
+    opacity: 1; }
+  .widget.added:after {
+    content: '\f00c';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 180px;
+    text-align: center;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    background: #418bca;
+    font-family: FontAwesome;
+    font-size: 3em;
+    color: #ffffff;
+    animation: pop-in 0.2s cubic-bezier(0.69, 0.17, 0.16, 0.92); }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes pop-in {
+  0% {
+    transform: scale(0); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+.widget-options {
+  opacity: 0;
+  position: absolute;
+  top: 0.75em;
+  right: 0.75em;
+  transition: opacity 0.1s cubic-bezier(0.69, 0.17, 0.16, 0.92); }
+  .widget-options a:after {
+    display: none; }
+  .widget-options i {
+    color: #ffffff;
+    font-size: 175%; }
+
+.grabber {
+  cursor: move;
+  cursor: -webkit-grabbing; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,17 +1,58 @@
 <div class="page">
     <div class="pageheader">
-        <h2>{{page.title}} <span></h2>
-
-        <div class="page-bar">
-            <ul class="page-breadcrumb">
-                <li>
-                    <a ui-sref="app.dashboard"><i class="fa fa-home"></i> {{main.title}}</a>
-                </li>
-                <li>
-                    <a ui-sref="app.dashboard">{{page.title}}</a>
-                </li>
-            </ul>
+        <h2>{{page.title}} <span>// {{page.subtitle}}</span></h2>
+        <div class="row">
+            <section class="widget-container half card-container" ng-sortable="m.widgetConfig">
+                <div class="widget card" ng-repeat="widget in m.findWidgets(1)">
+                    <aside class="widget-options">
+                        <a href="#" ng-show="m.hasWidget(1)">
+                            <i class="fa fa-check"></i>
+                        </a>
+                        <a href="#" class="grabber" ng-hide="m.hasWidget(1)">
+                            <i class="fa fa-hand-paper-o"></i>
+                        </a>
+                    </aside>
+                    <div ng-include="m.findWidget[1].template"></div>
+                </div>
+            </section>
+            <section class="widget-container half card-container" ng-sortable="m.widgetConfig">
+                <div class="widget card" ng-repeat="widget in m.findWidgets(2)">
+                    <aside class="widget-options">
+                        <a href="#" ng-show="m.hasWidget(2)">
+                            <i class="fa fa-check"></i>
+                        </a>
+                        <a href="#" class="grabber" ng-hide="m.hasWidget(2)">
+                            <i class="fa fa-hand-paper-o"></i>
+                        </a>
+                    </aside>
+                    <div ng-include="m.findWidget[2].template"></div>
+                </div>
+            </section>
+            <section class="widget-container half card-container" ng-sortable="m.widgetConfig">
+                <div class="widget card" ng-repeat="widget in m.findWidgets(3)">
+                    <aside class="widget-options">
+                        <a href="#" ng-show="m.hasWidget(3)">
+                            <i class="fa fa-check"></i>
+                        </a>
+                        <a href="#" class="grabber" ng-hide="m.hasWidget(3)">
+                            <i class="fa fa-hand-paper-o"></i>
+                        </a>
+                    </aside>
+                    <div ng-include="m.findWidget[3].template"></div>
+                </div>
+            </section>
         </div>
-        
     </div>
 </div>
+
+<script type="text/ng-template" id="billing.overview.html">
+    <i class="fa fa-line-chart fa-2x"></i><br><br> billing scope test: {{ b.munnies }}
+</script>
+
+<script type="text/ng-template" id="billing.detail.html">
+    <i class="fa fa-bar-chart fa-2x"></i><br><br> billing scope test: {{ b.munnies }}
+</script>
+
+<script type="text/ng-template" id="billing.list.html">
+    <i class="fa fa-list fa-2x"></i><br><br> billing scope test: {{ b.munnies }}
+</script>

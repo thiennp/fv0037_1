@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="minovateApp" ng-controller="MainCtrl" class="no-js {{containerClass}}">
+<html ng-app="minovateApp" ng-controller="MainCtrl as m" class="no-js {{containerClass}}">
 
 <head>
     <meta charset="utf-8">
@@ -48,6 +48,14 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <script src="https://use.typekit.net/lzp0hnu.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+    </script>
 </head>
 
 <body id="minovate" class="{{main.settings.navbarHeaderColor}} {{main.settings.activeColor}} {{containerClass}} header-fixed aside-fixed rightbar-hidden appWrapper" ng-class="{'header-fixed': main.settings.headerFixed, 'header-static': !main.settings.headerFixed, 'aside-fixed': main.settings.asideFixed, 'aside-static': !main.settings.asideFixed, 'rightbar-show': main.settings.rightbarShow, 'rightbar-hidden': !main.settings.rightbarShow}">
@@ -57,7 +65,10 @@
     <![endif]-->
 
     <!-- Application content -->
-    <div id="wrap" ui-view autoscroll="false"></div>
+    <div id="wrap" ui-view autoscroll="false" ng-hide="m.adding"></div>
+    <div id="dashboard" ng-show="m.adding">
+        <div ng-include="'views/tmpl/dashboard.html'"></div>
+    </div>
 
     <!-- Page Loader -->
     <div id="pageloader" page-loader></div>
@@ -80,16 +91,6 @@
         ga('create', 'UA-XXXXX-X');
         ga('send', 'pageview');
     </script>
-    <script src='//maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places,drawing&sensor=false&language=en&v=3.17'></script>
-
-    <!-- build:js(.) scripts/oldieshim.js -->
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-    <!-- endbuild -->
-
-    <!-- build:js(.) scripts/vendor.js -->
 
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
@@ -117,12 +118,10 @@
     <script src="bower_components/angular-flot/angular-flot.js"></script>
     <script src="bower_components/angular-fontawesome/dist/angular-fontawesome.js"></script>
     <script src="bower_components/angular-fullscreen/src/angular-fullscreen.js"></script>
-    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
-    <script src="bower_components/lodash/lodash.js"></script>
-    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <script src="bower_components/intro.js/intro.js"></script>
     <script src="bower_components/angular-intro.js/src/angular-intro.js"></script>
     <script src="bower_components/angular-ipsum/dist/ipsum.min.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
     <script src="bower_components/leaflet/dist/leaflet-src.js"></script>
     <script src="bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
     <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
@@ -142,7 +141,6 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
     <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
     <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
@@ -248,6 +246,10 @@
     <script src="scripts/directives/tilecontrollightbox.js"></script>
 
     <!-- endbuild -->
+    <script src='https://cdn.rawgit.com/RubaXa/Sortable/master/Sortable.js'></script>
+    <script src='https://cdn.rawgit.com/RubaXa/Sortable/dev/ng-sortable.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js'></script>
+
 </body>
 
 </html>

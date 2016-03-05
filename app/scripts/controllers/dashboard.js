@@ -10,6 +10,7 @@
 app
     .controller('DashboardCtrl', function($scope, $http) {
         $scope.page = {
-            title: 'Dashboard'
+            title: 'Dashboard',
+            subtitle: 'Your customizable dashboard.'
         };
     });

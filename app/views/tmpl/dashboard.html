@@ -1,17 +1,38 @@
-<div class="page">
+<div class="page page-dashboard">
     <div class="pageheader">
-        <h2>{{page.title}} <span></h2>
+        <h2>{{page.title}} <span>// {{page.subtitle}}</span></h2>
+    </div>
 
-        <div class="page-bar">
-            <ul class="page-breadcrumb">
-                <li>
-                    <a ui-sref="app.dashboard"><i class="fa fa-home"></i> {{main.title}}</a>
-                </li>
-                <li>
-                    <a ui-sref="app.dashboard">{{page.title}}</a>
-                </li>
-            </ul>
+    <div class="row">
+        <div class="col-md-12">
+            <section class="tile" fullscreen="isFullscreen01">
+                <div class="tile-header dvd dvd-btm">
+                    <h1 class="custom-font">Your <strong>Dashboard</strong></h1>
+                </div>
+                <div class="tile-body">
+                    <p ng-hide="m.adding">Your customizable dashboard.</p>
+                    <p ng-show="m.adding">Drop the widget below.</p>
+
+                    <div class="widgets" ng-class="{'widgets-empty': m.activeWidgets.length === 0 && m.adding}" ng-sortable="m.widgetsConfig">
+                        <section class="widget card-container" ng-repeat="widget in m.activeWidgets track by $index" ng-class="{'added': m.added == widget.id}">
+                            <aside class="widget-options" ng-hide="m.adding || m.dragging">
+                                <a href="#" ng-click="m.toggleWidget(widget.id)">
+                                    <i class="fa fa-trash-o"></i></a>
+                                <a href="#" class="grabber">
+                                    <i class="fa fa-hand-paper-o"></i></a>
+                            </aside>
+
+                            <div ng-include="widget.template" ng-dynamic-controller="widget.controller"></div>
+                        </section>
+                    </div>
+
+                    <div ng-hide="m.activeWidgets.length > 0 || m.adding">
+                        <i class="fa fa-meh-o fa-5x"></i>
+                        <br><br>
+                        <h2>Click on a report to the left to find widgets to drag here.</h2> Your dashboard is lonely. As you're looking through reports, if you see something you like, while hovering over the item click on the <i class="fa fa-hand-stop-o"></i> icon and drag it to your dashboard.
+                    </div>
+                </div>
+            </section>
         </div>
-        
     </div>
 </div>

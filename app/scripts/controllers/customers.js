@@ -8,7 +8,13 @@
  * Controller of the minovateApp
  */
 app.controller('CustomersCtrl', function($scope) {
+
     $scope.page = {
-        title: 'Customers'
+        title: 'Customers',
+        subtitle: 'Your customizable dashboard.'
     };
+
+    var vm = this;
+
+    vm.munnies = 3434;
 });

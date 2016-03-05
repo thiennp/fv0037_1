@@ -9,6 +9,8 @@
  */
 app.controller('BillingCtrl', function($scope) {
     $scope.page = {
-        title: 'Billing'
+        title: 'Billing',
+        subtitle: 'This is the billing view.'
     };
+    $scope.munnies = 5407;
 });

@@ -17,7 +17,7 @@ var app = angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngTouch',
+    'ng-sortable',
     'ngMessages',
     'picardy.fontawesome',
     'ui.bootstrap',
@@ -52,7 +52,6 @@ var app = angular
     'angular-flot',
     'angular-rickshaw',
     'easypiechart',
-    'uiGmapgoogle-maps',
     'ui.calendar',
     'ngTagsInput',
     'pascalprecht.translate',
@@ -108,15 +107,7 @@ var app = angular
 
     .state('app', {
       url: '/app',
-      templateUrl: 'views/tmpl/app.html',
-      resolve: {
-        plugins: ['$ocLazyLoad', function($ocLazyLoad) {
-          return $ocLazyLoad.load([
-            'scripts/vendor/datatables/datatables.bootstrap.min.css',
-            'scripts/vendor/datatables/datatables.bootstrap.min.css'
-          ]);
-        }]
-      }
+      templateUrl: 'views/tmpl/app.html'
     })
     //dashboard
     .state('app.dashboard', {
