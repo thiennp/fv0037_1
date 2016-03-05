@@ -16,5 +16,4 @@ app
       isSecondOpen: true,
       isThirdOpen: true
     };
-
   });

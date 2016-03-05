@@ -2,15 +2,13 @@
 
 /**
  * @ngdoc function
- * @name minovateApp.controller:BoxedlayoutCtrl
+ * @name minovateApp.controller:BillingCtrl
  * @description
- * # BoxedlayoutCtrl
+ * # BillingCtrl
  * Controller of the minovateApp
  */
-app
-  .controller('BillingCtrl', function ($scope) {
+app.controller('BillingCtrl', function($scope) {
     $scope.page = {
-      title: 'Boxed Layout',
-      subtitle: 'Place subtitle here...'
+        title: 'Billing'
     };
-  });
+});

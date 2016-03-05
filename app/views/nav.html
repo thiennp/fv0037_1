@@ -1,50 +1,46 @@
 <div id="sidebar-wrap" ng-controller="NavCtrl">
-  <uib-accordion close-others="oneAtTime" slimscroll="{height: '100%'}">
+    <uib-accordion close-others="oneAtTime" slimscroll="{height: '100%'}">
 
-    <uib-accordion-group is-open="status.isFirstOpen">
-      <uib-accordion-heading>
-        Navigation <i class="pull-right fa" ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}"></i>
-      </uib-accordion-heading>
-      <ul id="navigation" nav-collapse ripple>
+        <uib-accordion-group is-open="status.isFirstOpen">
+            <uib-accordion-heading>
+                Navigation <i class="pull-right fa" ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}"></i>
+            </uib-accordion-heading>
+            <ul id="navigation" nav-collapse ripple>
+                <li>
+                    <a ui-sref="app.dashboard" ui-sref-active="active">
+                        <fa name="dashboard"></fa>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="app.billing" ui-sref-active="active">
+                        <fa name="money"></fa>
+                        Billing
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="app.customers" ui-sref-active="active">
+                        <fa name="users"></fa>
+                        Customers
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="app.about" ui-sref-active="active">
+                        <fa name="building"></fa>
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="app.inserts" ui-sref-active="active">
+                        <fa name="download"></fa>
+                        Inserts
+                    </a>
+                </li>
 
-        <!-- BUTTON 0 -->
-        <li ui-sref-active="active"><a ui-sref="app.dashboard"><fa name="dashboard"></fa> <span>{{ 'Menu.DASHBOARD' | translate }}</span></a></li>
-
-        <li>
-              <a ui-sref="app.dashboard"
-                 ui-sref-active="active">
-                  Dashboard
-              </a>
-          </li>
-          <li>
-              <a ui-sref="app.billing"
-                 ui-sref-active="active">
-                  Billing
-              </a>
-          </li>
-          <li>
-              <a ui-sref="app.customers"
-                 ui-sref-active="active">
-                  Customers
-              </a>
-          </li>
-          <li>
-              <a ui-sref="about"
-                 ui-sref-active="active">
-                  About
-              </a>
-          </li>
-          <li>
-              <a ui-sref="inserts"
-                 ui-sref-active="active">
-                  Inserts
-              </a>
-          </li>
-
-      </ul>
-    </uib-accordion-group>
+            </ul>
+        </uib-accordion-group>
 
 
 
-  </uib-accordion>
+    </uib-accordion>
 </div>
