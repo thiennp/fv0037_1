@@ -12471,10 +12471,21 @@ hr.line-full {
 * {
   box-sizing: border-box; }
 
+body,
+.page,
+.tile {
+  background: #51425f;
+  color: #ffffff; }
+
+.pageheader h2 {
+  color: #e6e6e6; }
+  .pageheader h2 span {
+    color: #cccccc; }
+
 #main {
   width: 100%;
   padding: 1.5em 1.5em 1.5em 250px;
-  background: #418bca; }
+  background: #51425f; }
   .sidebar-sm #main {
     padding-left: 80px; }
   .sidebar-xs #main {
@@ -12496,7 +12507,7 @@ hr.line-full {
   width: 100vw;
   height: 100vh;
   padding: 1.5em 1.5em 1.5em 250px;
-  background: #418bca; }
+  background: #51425f; }
   .sidebar-sm #dashboard {
     padding-left: 80px; }
   .sidebar-xs #dashboard {
@@ -12551,16 +12562,16 @@ hr.line-full {
     max-width: 48%; }
 
 .widget {
-  background: #3681c1;
-  border: 2px solid #3681c1;
+  background: #473a53;
+  border: 2px solid #ffffff;
   color: #ffffff;
   text-align: center;
   padding: 3em 1em;
   transition: border 0.3s cubic-bezier(0.69, 0.17, 0.16, 0.92); }
   .widget.widget-ghost {
     background: transparent;
-    border: 2px dashed #418bca;
-    color: #418bca; }
+    border: 2px dashed #ffffff;
+    color: #ffffff; }
   .widget:hover .widget-options {
     opacity: 1; }
   .widget.added:after {
@@ -12573,7 +12584,7 @@ hr.line-full {
     vertical-align: middle;
     top: 0;
     left: 0;
-    background: #418bca;
+    background: #51425f;
     font-family: FontAwesome;
     font-size: 3em;
     color: #ffffff;

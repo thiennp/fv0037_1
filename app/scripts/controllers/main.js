@@ -40,6 +40,9 @@ app
             sort: false,
             onStart: function(evt) {
                 vm.adding = true;
+            },
+            onEnd: function(evt) {
+                vm.adding = false;
             }
         };
 
